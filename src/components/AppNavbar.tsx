@@ -32,19 +32,19 @@ export default function AppNavbar({ searchText }: AppNavbarProps) {
 
   console.log(errors);
   return (
-    <Navbar disableAnimation maxWidth="full" className="bg-transparent">
-      <NavbarContent className="mt-10" justify="center">
+    <Navbar disableAnimation maxWidth="full" className="navbar h-32">
+      <NavbarContent justify="center">
         <NavbarBrand>
           <img
             src={Logo}
             width={100}
             height={100}
             alt="Commune AI BooksSearchEngine logo"></img>
-          <p className="text-4xl text-white">Commune AI BooksSearchEngine</p>
+          <p className="text-4xl text-white">Commune AI BookSearchEngine</p>
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent justify="end" className="mt-10">
+      <NavbarContent justify="end">
         <form
           onSubmit={handleSearchText}
           className="flex items-center rounded-none">

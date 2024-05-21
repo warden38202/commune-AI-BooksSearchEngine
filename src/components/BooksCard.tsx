@@ -18,7 +18,7 @@ const BooksCard = (props: BookState) => {
 
   if (!book.image) return;
 
-  const { authors, image, pages, title, download, id, year } = book;
+  const { authors, image, pages, title, download, id } = book;
 
   // console.log({ book });
 
@@ -46,8 +46,6 @@ const BooksCard = (props: BookState) => {
             <p className="text-default-500 overflow-hidden whitespace-nowrap overflow-ellipsis max-w-full">
               {authors}
             </p>
-            <div className="flex flex-row">{year}</div>
-
             <div className="flex items-center justify-between w-full">
               <p>{pages || 0} pages</p>
               <Tooltip

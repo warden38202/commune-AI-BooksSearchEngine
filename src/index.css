@@ -40,6 +40,10 @@ body {
     font-style: normal; */
 }
 
+.navbar {
+  background: linear-gradient(to bottom, #000066 0%, #0033cc 100%);
+}
+
 /*
 h1 {
     font-size: 3.2em;
