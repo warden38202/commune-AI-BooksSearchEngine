@@ -35,12 +35,6 @@ To get a local copy up and running, follow these simple steps:
    npm run dev
    ```
 
-## Screenshots
-
-![Devlib Login](https://github.com/NishantCoder108/devlib/blob/master/devlib_login.png)
-![Devlib Home](https://github.com/NishantCoder108/devlib/blob/master/devlib_home.png)
-![Devlib Integration](https://github.com/NishantCoder108/devlib/blob/master/devlib_integrateai.png)
-
 ## Contributing
 
 Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
