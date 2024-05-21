@@ -1,27 +1,77 @@
-<h2>AI Chat Interface with Next.js and Tailwind CSS</h2>
-<img src='public/ailogo.png' width='150px'/>
+# AI-Based Books Library
 
-This project is an AI-powered chat interface developed using Next.js and Tailwind CSS. It allows users to interact with an artificial intelligence model similar to ChatGPT, generating responses based on user input. However, to utilize the AI model, you need access to the [Ollama](https://ollama.com/) platform, which includes the Gemma:2b model..
+A web application for book recommendations powered by AI. Users can ask for book recommendations based on their interests and preferences, and the app provides personalized suggestions. Users can also download the recommended books.
 
----
+<!--
+![Demo Image](https://example.com/demo-image.png)
+-->
 
-Greetings, Now This project is fully compatible with ollama's image models, for example you can use the llava model and select your images to examine with artificial intelligence.
+## Live Link
 
-This project is dynamically compatible with all of Ollama's text models. The sidebar has been updated, allowing you to add your models and easily switch between your downloaded models.
+[devlib.](https://devlib108.vercel.app/)
 
-When you download and run this project it will automaticly  check Ollama's existence, Ollama's status (is running or not), Gemma:2b model's existence and it will guide you to follow the instructions to start chatting.
+## Read Blog 👇
 
----
+[Ai Based books library](https://nishantcoder.gumroad.com/l/ai-based-books-library?layout=profile)
 
-If you don't have ollama and the gemma:2b model, after downloading this interface, simply follow the instructions below to start chatting.
+## Demo Video
 
-Firstly, you need to download and install ollama. Here is the [download link](https://ollama.com/download). After installation, open your command prompt and type 'ollama'. This will display all ollama commands. Then, you can execute the following command: ```ollama pull gemma:2b```. This command will automatically download and run the gemma:2b model.
+[![YouTube Video](https://github.com/NishantCoder108/devlib/blob/master/devlib_login.png)](https://www.youtube.com/watch?v=R4RfPtBuNRQ)
 
-Once you have completed all these steps, you can launch the interface and start chatting with the gemma:2b model.
+## Technologies Used
 
-I'd like to mention that I'll continue developing this project. Additionally, it will be made compatible with other ollama models. Users will be able to select the loaded model via the sidebar and engage in conversation based on the chosen model. This will allow users to interact with their preferred model and experience a broader range of capabilities.
+-   **Frontend**: React.js, TypeScript, NextUi, Tailwind CSS
+-   **State Management**: Redux Toolkit
+-   **Authentication**: Firebase Authentication
+-   **Design**: Figma for UI/UX design
+-   **Deployment**: Vercel
+-   **AI Integration**: OpenAI for book recommendations
 
----
-<img src='public/ssss.png'/>
-<img src='public/sss.png'/>
-<img src='public/ss.png'/>
+## Features
+
+-   **AI Book Recommendations**: Get personalized book recommendations based on your preferences.
+-   **Download Books**: Download recommended books directly from the app.
+-   **User Authentication**: Securely authenticate users using Firebase Authentication.
+-   **Responsive Design**: Fully responsive design for a seamless experience on all devices.
+
+## Getting Started
+
+To get a local copy up and running, follow these simple steps:
+
+1. Clone the repo
+    ```sh
+    git clone https://github.com/NishantCoder108/devlib.git
+    ```
+2. Install NPM packages
+    ```sh
+    npm install
+    ```
+3. Start the development server
+    ```sh
+    npm run dev
+    ```
+
+<!--
+## Demo
+
+Check out this short video to see the app in action:
+
+[![Demo Video](https://github.com/NishantCoder108/devlib/blob/master/devlib_login.png)](https://youtu.be/R4RfPtBuNRQ)
+
+-->
+
+## Screenshots
+
+![Devlib Login](https://github.com/NishantCoder108/devlib/blob/master/devlib_login.png)
+![Devlib Home](https://github.com/NishantCoder108/devlib/blob/master/devlib_home.png)
+![Devlib Integration](https://github.com/NishantCoder108/devlib/blob/master/devlib_integrateai.png)
+
+## Contributing
+
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
