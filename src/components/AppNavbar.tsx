@@ -1,23 +1,15 @@
-import Logo from "../assets/svg/logo.svg";
-import Logout from "../assets/svg/logout.svg";
+import Logo from "/public/logo.gif";
 import SearchIcon from "../assets/svg/search.svg";
 
 import {
   Navbar,
   NavbarBrand,
   NavbarContent,
-  NavbarItem,
   Button,
   Input,
-  Tooltip,
 } from "@nextui-org/react";
-import { signOut } from "firebase/auth";
-import { auth } from "../configs/firebase";
-import { logoutUser } from "../features/authSlice";
-import { useAppDispatch } from "../app/hooks";
-import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import SearchByAi from "./gpt/SearchByAi";
+//import SearchByAi from "./gpt/SearchByAi";
 
 interface ISearchData {
   searchText: string;
@@ -31,19 +23,6 @@ export default function AppNavbar({ searchText }: AppNavbarProps) {
     handleSubmit,
     formState: { errors },
   } = useForm<ISearchData>();
-  const dispatch = useAppDispatch();
-  const navigate = useNavigate();
-
-  const handleLogout = () => {
-    signOut(auth)
-      .then(() => {
-        dispatch(logoutUser());
-        navigate("/", { replace: true });
-      })
-      .catch((error) => {
-        console.log("Logout Failed Error :", error);
-      });
-  };
 
   const handleSearchText = handleSubmit((data) => {
     console.log("SearchTextInNavbar:-", data);
@@ -54,13 +33,18 @@ export default function AppNavbar({ searchText }: AppNavbarProps) {
   console.log(errors);
   return (
     <Navbar disableAnimation maxWidth="full" className="bg-transparent">
-      <NavbarContent className="" justify="center">
+      <NavbarContent className="mt-10" justify="center">
         <NavbarBrand>
-          <img src={Logo} alt="Commune AI BooksSearchEngine logo"></img>
+          <img
+            src={Logo}
+            width={100}
+            height={100}
+            alt="Commune AI BooksSearchEngine logo"></img>
+          <p className="text-4xl text-white">Commune AI BooksSearchEngine</p>
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent justify="end" className="">
+      <NavbarContent justify="end" className="mt-10">
         <form
           onSubmit={handleSearchText}
           className="flex items-center rounded-none">
@@ -87,23 +71,7 @@ export default function AppNavbar({ searchText }: AppNavbarProps) {
             <img src={SearchIcon} alt="ai logo" className="w-4" />
           </Button>
         </form>
-        <SearchByAi />
-        <NavbarItem>
-          <Tooltip
-            placement={"bottom"}
-            content={"Logout"}
-            offset={-3}
-            showArrow>
-            <Button
-              isIconOnly
-              aria-label="logout"
-              className="bg-transparent"
-              radius="full"
-              onClick={handleLogout}>
-              <img src={Logout} alt="logout" className="w-4" />
-            </Button>
-          </Tooltip>
-        </NavbarItem>
+        {/* <SearchByAi /> */}
       </NavbarContent>
     </Navbar>
   );

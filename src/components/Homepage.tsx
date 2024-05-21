@@ -4,20 +4,20 @@ import AppNavbar from "./AppNavbar";
 import AiPrompt from "./gpt/AiPrompt";
 
 const Homepage = () => {
-    const [text, setText] = useState("javascript");
+  const [text, setText] = useState("javascript");
 
-    const handleSearchText = (data: string) => {
-        console.log("Homepage Search Text :-", data);
+  const handleSearchText = (data: string) => {
+    console.log("Homepage Search Text :-", data);
 
-        setText(data);
-    };
+    setText(data);
+  };
 
-    return (
-        <div>
-            <AppNavbar searchText={handleSearchText} />
-            <AiPrompt promptText={text} />
-        </div>
-    );
+  return (
+    <div>
+      <AppNavbar searchText={handleSearchText} />
+      <AiPrompt promptText={text} />
+    </div>
+  );
 };
 
 export default Homepage;
