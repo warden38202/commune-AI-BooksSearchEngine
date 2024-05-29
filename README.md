@@ -1,4 +1,4 @@
-# AI Powered Books Search Engine
+# Book Search Engine
 
 ## Getting Started
 
